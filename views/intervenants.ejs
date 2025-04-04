@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Liste des Intervenants</title>
+</head>
+
+<body>
+    <h1>Liste des Intervenants</h1>
+
+    <% if (intervenants && intervenants.length> 0) { %>
+        <ul>
+            <% intervenants.forEach(intervenant=> { %>
+                <li>
+                    <strong>
+                        <%= intervenant.username %>
+                    </strong> - <%= intervenant.email %>
+                </li>
+                <% }); %>
+        </ul>
+        <% } else { %>
+            <p>Aucun intervenant trouvé.</p>
+            <% } %>
+
+                <nav>
+                    <ul>
+                        <li><a href="/">Retour à l'accueil</a></li>
+                        <li><a href="/logout">Se déconnecter</a></li>
+                    </ul>
+                </nav>
+</body>
+
+</html>

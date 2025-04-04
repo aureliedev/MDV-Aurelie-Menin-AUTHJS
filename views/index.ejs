@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Accueil</title>
+</head>
+
+<body>
+    <h1>Bienvenue <%= nom %> !</h1>
+    <nav>
+        <ul>
+            <% if (role==='admin' ) { %>
+                <li><a href="/admin">🛡️ Espace Administrateur</a></li>
+                <li><a href="/intervenants">📋 Liste des Intervenants</a></li>
+                <% } %>
+                    <% if (role==='intervenant' || role==='admin' ) { %>
+                        <li><a href="/etudiants">📚 Liste des Étudiants</a></li>
+                        <% } %>
+                            <% if (role==='student' ) { %>
+                                <li><a href="/details">👤 Mes Détails</a></li>
+                                <% } %>
+                                    <li><a href="/logout">Se déconnecter</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

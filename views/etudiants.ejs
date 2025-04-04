@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Liste des Étudiants</title>
+</head>
+
+<body>
+    <h1>Liste des Étudiants</h1>
+
+    <% if (students && students.length> 0) { %>
+        <ul>
+            <% students.forEach(student=> { %>
+                <li>
+                    <strong>
+                        <%= student.username %>
+                    </strong> - <%= student.email %>
+                </li>
+                <% }); %>
+        </ul>
+        <% } else { %>
+            <p>Aucun étudiant trouvé.</p>
+            <% } %>
+
+                <nav>
+                    <ul>
+                        <li><a href="/">Retour à l'accueil</a></li>
+                        <li><a href="/logout">Se déconnecter</a></li>
+                    </ul>
+                </nav>
+</body>
+
+</html>
