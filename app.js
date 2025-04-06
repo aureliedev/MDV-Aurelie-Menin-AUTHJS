@@ -120,9 +120,9 @@ app.get("/intervenants", authenticate, authorizeAdmin, (req, res) => {
   });
 });
 
-app.get("/admin", authenticate, authorizeAdmin, (req, res) => {
+app.get("/dashdmin", authenticate, authorizeAdmin, (req, res) => {
   const { username } = req.user;
-  res.render("admin", { nom: username });
+  res.render("dashdmin", { nom: username });
 });
 
 app.get("/signin", (req, res) => {
