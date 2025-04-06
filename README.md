@@ -42,7 +42,7 @@ CREATE TABLE users (
 );
 ```
 
-Exemple pour assigné un role directement en base de donnée:
+Exemple pour assigner un role directement en base de donnée:
 
 ````
 UPDATE users
