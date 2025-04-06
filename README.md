@@ -41,3 +41,12 @@ CREATE TABLE users (
   role ENUM('admin', 'intervenant', 'student') DEFAULT 'student'
 );
 ```
+
+Exemple pour assigné un role directement en base de donnée:
+
+````
+UPDATE users
+SET role = 'admin'
+WHERE username = 'username';
+```
+````
