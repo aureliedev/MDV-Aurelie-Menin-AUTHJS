@@ -1,0 +1,14 @@
+Rapport de Développement
+
+Objectifs du projet:
+Le but était de sécuriser l'accès aux sections sensibles du projet :
+
+-Mot de passe + OTP via Google Authenticator pour accéder aux pages sensibles.
+
+-Accès restreint aux intervenants et administrateurs pour consulter la liste des intervenants.
+
+Choix techniques
+J'ai choisi Express.js pour le backend, car il est simple à configurer. L'authentification est réalisée avec JWT pour gérer les sessions de manière sécurisée. Pour renforcer la sécurité, j'ai intégré un système d'authentification multifacteur (MFA) via Google Authenticator en générant des OTP (One-Time Password) avec la bibliothèque otpauth, et en affichant un QR code avec QRCode. La base de données est gérée avec MySQL et mysql2 pour stocker les utilisateurs et leurs rôles (admin, intervenant, étudiant).
+
+Post-Mortem
+Problème rencontré : L'intégration de l'OTP (Google Authenticator) a pris du temps, notamment pour comprendre comment générer et valider les codes OTP. La synchronisation des dates entre le serveur et l'application mobile a également posé un défi, rendant difficile la validation correcte des codes temporaires. En fin de compte, je n'ai pas pu mettre en place l'OTP comme prévu.

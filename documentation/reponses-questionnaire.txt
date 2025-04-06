@@ -1,0 +1,48 @@
+1. Comment définiriez-vous l'auhtentification ? (Quels sont ses mécanismes, à quoi sert-elle ?)
+ > L'authentification permet de vérifier l'identité d'un utilisateur qui tente d'accéder à un système. Les mécanismes incluent généralement l'utilisation d'un nom d'utilisateur et d'un mot de passe, mais aussi d'autres facteurs comme un OTP (One-Time Password) ou la reconnaissance biométrique.
+
+2. Quelles sont les différences avec l'autorisation ?
+ > L'authentification vérifie qui vous êtes, tandis que l'autorisation détermine ce que vous êtes autorisé à faire une fois authentifié.
+
+3. Qu'est-ce qu'un facteur d'authentification ?
+ > Un facteur d'authentification est un élément utilisé pour prouver l'identité d'un utilisateur. Il peut être quelque chose que vous savez (mot de passe), que vous possédez (téléphone pour un OTP), ou qui vous êtes (empreinte digitale).
+
+4. Citez 3 méthodes d'authentification
+ > Mot de passe
+ >OTP (One-Time Password)
+ >Reconnaissance biométrique (empreinte digitale)
+
+5. Qu'est-ce que le hashage ?
+ > Le hashage est un processus qui transforme une donnée (comme un mot de passe) en une valeur fixe de longueur fixe. Il est utilisé pour sécuriser les mots de passe dans les bases de données.
+
+6. À quoi sert le sel dans le hashage ?
+ > Le sel est une valeur aléatoire ajoutée au mot de passe avant le hashage pour rendre plus difficile les attaques par force brute (par ex).
+
+7. Qu'est-ce que le chiffrement ?
+ > Le chiffrement est un processus qui transforme des données lisibles en données illisibles pour les protéger. Il peut être inversé avec une clé secrète.
+
+8. Qu'est-ce que l'attaque par force brute ? Et comment s'en prémunir ?
+ > Une attaque par force brute consiste à tester toutes les combinaisons possibles jusqu'à trouver la bonne. Pour s'en prémunir, on peut limiter les tentatives de connexion, utiliser des mots de passe complexes et ajouter un CAPTCHA.
+
+9. Quels sont les points d'attention lors d'un développement d'un système d'authentification ?
+ > Il faut veiller à la sécurité du stockage des mots de passe (avec hashage et sel), à la gestion des sessions, à la protection contre les attaques (comme CSRF et XSS). 
+
+10. Expliquer le principe d'authentification multifacteur ?
+ > Le MFA combine plusieurs facteurs pour vérifier l'identité d'un utilisateur, comme un mot de passe et un code OTP.
+
+11. Qu'est-ce qu'une attaque CSRF ? Comment peut-on s'en protéger ?
+ > Une attaque CSRF incite un utilisateur à effectuer une action non désirée sur un site où il est authentifié. On peut s'en protéger en utilisant des tokens anti-CSRF dans les formulaires et en validant les requêtes.
+
+12. Expliquez ce que représente pour vous le principe de session, de cookies et de headers.
+ > Session : Un espace de stockage côté serveur pour conserver les informations d'un utilisateur pendant sa session.
+ > Cookies : Petits fichiers stockés sur le navigateur qui contiennent des informations, comme un identifiant de session.
+ > Headers : Informations envoyées avec chaque requête HTTP, souvent pour gérer l'authentification et la session (par exemple, les tokens).
+
+13. Par quel protocole est sécurisé l'échange d'information entre un client web et un serveur web ? Expliquez les grands principes
+ > L'échange est sécurisé par le protocole HTTPS, qui chiffre les données avec SSL/TLS pour garantir la confidentialité et l'intégrité des informations échangées.
+
+14. Qu'est-ce qu'un token JWT ? De quoi est-il composé ?
+ > Le token JWT (JSON Web Token) est un moyen d'échanger des informations de manière sécurisée. Il est composé de Header, Payload et Signature.
+
+15. Qu'est-ce que l'OAuth 2 ? Qu'est-ce qu'il résout ?
+ > OAuth 2 est un protocole d'autorisation qui permet à un utilisateur d'accorder un accès limité à ses ressources sans partager ses identifiants. Il résout le problème de donner accès à une application tierce sans compromettre la sécurité des identifiants de l'utilisateur.
